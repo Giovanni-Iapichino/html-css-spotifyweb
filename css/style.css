@@ -1,6 +1,6 @@
 :root {
   --player-height: 90px;
-  --sidebar-width: 80px;
+  --sidebar-width: 230px;
   --main-content-header-height: 100px;
 }
 
@@ -15,7 +15,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #141922;
-  color: white;
+  color: #707070;
+  font-weight: bold;
 }
 
 img {
@@ -35,21 +36,32 @@ ul {
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container-flex {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
   row-gap: 2rem;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 [class*="col"] {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .col-100 {
@@ -115,8 +127,81 @@ ul {
   overflow: auto;
 }
 
-@media screen and (min-width: 600px) {
-  :root {
-    --sidebar-width: 300px;
+/* SIDEBAR */
+.logo {
+  padding: 27px 0px;
+}
+
+.small-logo {
+  width: 29px;
+  display: none;
+}
+
+.big-logo {
+  width: 140px;
+}
+
+.icon-category {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.icon-category-install {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.category-list-item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.fa-solid,
+.fa-plus {
+  padding: 10px;
+  color: black;
+  background-color: #a3a3a3;
+  margin-right: 7px;
+}
+
+.playlist-title-sidebar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.playlist li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.new-playlist {
+  font-size: 18px;
+}
+
+.install {
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+/* MEDIUM DEVICE */
+@media screen and (max-width: 552px) {
+  .big-logo {
+    display: none;
+  }
+
+  .small-logo {
+    display: block;
+  }
+
+  .icon-description {
+    display: none;
+  }
+
+  .playlist {
+    display: none;
   }
 }
