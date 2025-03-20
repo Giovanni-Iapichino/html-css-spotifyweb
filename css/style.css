@@ -1,7 +1,7 @@
 :root {
   --player-height: 90px;
-  --sidebar-width: 230px;
-  --sidebar-xs-width: 60px;
+  --sidebar-width: 60px;
+  --sidebar-s-width: 230px;
   --main-content-header-height: 100px;
 }
 
@@ -26,6 +26,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -136,10 +137,10 @@ ul {
 
 .small-logo {
   width: 29px;
-  display: none;
 }
 
 .big-logo {
+  display: none;
   width: 140px;
 }
 
@@ -149,6 +150,10 @@ ul {
   margin-right: 10px;
 }
 
+.icon-description {
+  display: none;
+}
+
 .icon-category-install {
   width: 20px;
   vertical-align: middle;
@@ -156,7 +161,8 @@ ul {
 }
 
 .icon-category-user {
-  width: 30px;
+  width: 25px;
+  height: 25px;
   vertical-align: middle;
   margin-right: 10px;
   padding: 2px 2px;
@@ -177,6 +183,10 @@ ul {
   margin-right: 7px;
 }
 
+.playlist {
+  display: none;
+}
+
 .playlist-title-sidebar {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -192,8 +202,11 @@ ul {
 }
 
 .install {
-  border-bottom: 1px solid grey;
   padding-bottom: 10px;
+}
+
+.install span {
+  display: none;
 }
 
 .profile {
@@ -207,43 +220,68 @@ ul {
   color: white;
 }
 
+.profile .user {
+  display: none;
+}
+
+/* PLAYER */
+#player {
+  display: flex;
+}
+
+.player-left,
+.player-middle,
+.player-right {
+  display: flex;
+}
+
+.player-middle {
+  flex-grow: 1;
+}
+
 /* RESPONSIVE */
 
-/* MEDIUM DEVICE */
-@media screen and (max-width: 552px) {
-  #sidebar {
-    width: var(--sidebar-xs-width);
-  }
-
+/* S DEVICE */
+@media screen and (min-width: 570px) {
   .big-logo {
-    display: none;
-  }
-
-  .small-logo {
     display: block;
   }
 
-  .icon-description {
+  .small-logo {
     display: none;
+  }
+
+  #sidebar {
+    width: var(--sidebar-s-width);
+  }
+
+  .icon-description {
+    display: block;
+  }
+
+  .category-list-item a {
+    display: flex;
+    align-items: center;
   }
 
   .playlist {
-    display: none;
-  }
-
-  .icon-category-install {
     display: block;
   }
 
   .install {
-    border-bottom: none;
+    border-bottom: 1px solid grey;
+    display: flex;
   }
 
   .install span {
-    display: none;
+    display: block;
   }
 
   .profile .user {
-    display: none;
+    display: block;
+  }
+
+  .profile {
+    display: flex;
   }
 }
