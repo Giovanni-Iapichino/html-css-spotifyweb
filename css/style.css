@@ -603,6 +603,18 @@ ul {
   .song-name {
     font-size: 15px;
   }
+
+  .recently-played .card {
+    width: calc(100% / 4);
+  }
+
+  .create-for-john {
+    width: calc(100% / 2);
+  }
+
+  .popular {
+    width: calc(100% / 2);
+  }
 }
 
 /* LARGE DEVICE */
@@ -630,5 +642,17 @@ ul {
 
   .player-left-icon {
     margin-left: 25px;
+  }
+
+  .recently-played .card {
+    width: calc(100% / 6);
+  }
+
+  .create-for-john {
+    width: calc(100% / 4);
+  }
+
+  .popular {
+    width: calc(100% / 4);
   }
 }
