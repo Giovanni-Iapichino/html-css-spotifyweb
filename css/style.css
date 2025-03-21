@@ -358,7 +358,7 @@ ul {
 
 .cursor-middle-bar:hover {
   width: 40px;
-  border: 2px solid yellowgreen;
+  border: 2px solid #3be477;
   border-radius: 20px;
   position: relative;
 }
@@ -382,7 +382,7 @@ ul {
   top: 50%;
   right: 0px;
   transform: translateY(-50%) translateX(50%);
-  background-color: greenyellow;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -414,7 +414,7 @@ ul {
 
 .cursor-volume-bar:hover {
   width: 20px;
-  border: 2px solid yellowgreen;
+  border: 2px solid #3be477;
   border-radius: 20px;
   position: relative;
 }
@@ -438,7 +438,7 @@ ul {
   top: 50%;
   right: 0px;
   transform: translateY(-50%) translateX(50%);
-  background-color: yellowgreen;
+  background-color: white;
   cursor: pointer;
 }
 
